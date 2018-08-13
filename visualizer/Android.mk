@@ -33,6 +33,12 @@ LOCAL_SHARED_LIBRARIES := \
 
 LOCAL_HEADER_LIBRARIES := libhardware_headers
 
+LOCAL_CFLAGS += \
+    -Wall \
+    -Werror \
+    -Wno-unused-parameter \
+    -Wno-unused-variable \
+
 LOCAL_MODULE_RELATIVE_PATH := soundfx
 LOCAL_MODULE:= libqcomvisualizer
 LOCAL_VENDOR_MODULE := true

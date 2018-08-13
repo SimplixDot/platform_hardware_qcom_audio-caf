@@ -451,7 +451,6 @@ int offload_effects_bundle_set_hpx_state(bool hpx_state)
         }
     }
 
-exit:
     pthread_mutex_unlock(&lock);
     return ret;
 }
@@ -465,12 +464,15 @@ __attribute__ ((visibility ("default")))
 void offload_effects_bundle_get_parameters(struct str_parms *query,
                                            struct str_parms *reply)
 {
+    (void)query;
+    (void)reply;
     asphere_get_parameters(query, reply);
 }
 
 __attribute__ ((visibility ("default")))
 void offload_effects_bundle_set_parameters(struct str_parms *parms)
 {
+    (void)parms;
     asphere_set_parameters(parms);
 }
 
